@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./css/publish.css">
+    <title>Post No. ?</title>
+</head>
+
+<body>
+    <div class="nav-bar"></div>
+
+    <div id="app">
+
+        <div>
+                <h2> {{ posts[0].title }} </h2>
+        </div>
+
+        <table>
+            <tr v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.albumId">
+                <td class="image">
+                    <img v-bind:src="post.thumbnailUrl">
+                </td>
+                <th class="tittle">
+                    <h2> {{ post.title }} </h2>
+                </th>
+            </tr>
+        </table>
+
+        <div v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.id">
+            <h1> {{ post.title }} </h1>
+            <img v-bind:src="post.url">
+        </div>
+
+    </div>
+
+    <script src="./js/vue.js"></script>
+    <script src="./js/publish.js"></script>
+</body>
+
+</html>
