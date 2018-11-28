@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <title>NewSpace.com</title>
+    <link rel="icon" href="./rcs/favicon.png">
 </head>
 
 <body>
@@ -26,7 +27,6 @@
             <tr v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.albumId">
                 <td class="image">
                     <img v-bind:src="post.thumbnailUrl">
-                    <!--<img v-bind:src="post.thumbnailUrl">-->
                 </td>
                 <th class="title">
                     <h2> {{ post.title }} </h2>
