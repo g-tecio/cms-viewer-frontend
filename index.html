@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
     <title>NewSpace.com</title>
-    <link rel="icon" href="../rcs/favicon.png">
+    <link rel="icon" href="./rcs/favicon.png">
 </head>
 
 <body>
@@ -23,10 +23,11 @@
     <div id="app" class="content">
 
         <table>
-            <!-- <tr v-for="post in posts"> -->
-            <tr v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.albumId">
+            <!-- <tr v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.albumId"> -->
+            <tr v-for="post in posts" class="post" :id="post.id">
                 <td class="image">
-                    <img v-bind:src="post.thumbnailUrl">
+                    <img v-bind:src="post.url" v-if="post.url != null">
+                    <img src="../rcs/nope.png" v-else>
                 </td>
                 <th class="title">
                     <h2> {{ post.title }} </h2>
@@ -36,8 +37,8 @@
 
     </div>
 
-    <script src="../js/vue.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 
