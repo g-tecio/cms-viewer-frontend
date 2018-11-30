@@ -23,10 +23,9 @@
     <div id="app" class="content">
 
         <table>
-            <!-- <tr v-for="post in posts" v-if="post.albumId === 1" class="post" :id="post.albumId"> -->
             <tr v-for="post in posts" class="post" :id="post.id">
                 <td class="image">
-                    <img v-bind:src="post.url" v-if="post.url != null">
+                    <img v-bind:src="post.images[0]" v-if="post.images != null">
                     <img src="../rcs/nope.png" v-else>
                 </td>
                 <th class="title">
