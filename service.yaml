@@ -50,7 +50,7 @@ Resources:
             ContainerDefinitions:
                 - Name: CMS-Clients
                   Essential: true
-                  Image: !Ref CreatorImage
+                  Image: !Ref ViewerImage
                   Memory: 512
                   PortMappings:
                     - ContainerPort: 80
